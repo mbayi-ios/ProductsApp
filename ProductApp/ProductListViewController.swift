@@ -63,13 +63,24 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
 
 
 extension UIImageView {
-    func loadImage(from urlString: String) {
-        guard let url = URL(string: urlString) else { return }
+    func loadImage(from urlString: String, with loader: UIActivityIndicatorView) {
+        loader.startAnimating()
+        self.image = nil
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        guard let url = URL(string: urlString) else {
+            loader.stopAnimating()
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) {[weak self] data, response, error in
             if let data = data, error == nil {
                 DispatchQueue.main.async {
-                    self.image = UIImage(data: data)
+                    self?.image = UIImage(data: data)
+                    loader.stopAnimating()
+                }
+            } else {
+                DispatchQueue.main.async {
+                    loader.stopAnimating()
                 }
             }
         }.resume()

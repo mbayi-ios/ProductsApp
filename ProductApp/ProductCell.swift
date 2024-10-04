@@ -11,6 +11,7 @@ import UIKit
 class ProductCell: UITableViewCell {
     private let productImageView = UIImageView()
     private let titleLabel = UILabel()
+    private let activityIndicator = UIActivityIndicatorView(style: .medium)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -33,6 +34,7 @@ class ProductCell: UITableViewCell {
         
         contentView.addSubview(productImageView)
         contentView.addSubview(titleLabel)
+        contentView.addSubview(activityIndicator)
         
         NSLayoutConstraint.activate([
             productImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
@@ -48,6 +50,6 @@ class ProductCell: UITableViewCell {
     
     func configure(with product: Product) {
         titleLabel.text = product.title
-        productImageView.loadImage(from: product.thumbnail)
+        productImageView.loadImage(from: product.thumbnail, with: activityIndicator)
     }
 }

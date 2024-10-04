@@ -9,6 +9,7 @@ class ProductDetailViewController: UIViewController {
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
     private let priceLabel = UILabel()
+    private let activityIndicator = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +34,14 @@ class ProductDetailViewController: UIViewController {
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
         priceLabel.font = UIFont.systemFont(ofSize: 18)
         
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        
         view.addSubview(productImageView)
         view.addSubview(titleLabel)
         view.addSubview(descriptionLabel)
         view.addSubview(priceLabel)
+        view.addSubview(activityIndicator)
         
         NSLayoutConstraint.activate([
             productImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -54,7 +59,10 @@ class ProductDetailViewController: UIViewController {
             
             priceLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 20),
             priceLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            priceLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            priceLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: productImageView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: productImageView.centerYAnchor)
         ])
     }
     
@@ -66,7 +74,7 @@ class ProductDetailViewController: UIViewController {
         priceLabel.text = "Price: $\(product.price)"
         
         if let firstImage = product.images.first {
-            productImageView.loadImage(from: firstImage)
+            productImageView.loadImage(from: firstImage, with: activityIndicator)
         }
         
         
