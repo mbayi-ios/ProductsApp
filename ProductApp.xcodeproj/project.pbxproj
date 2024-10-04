@@ -18,6 +18,8 @@
 		CD78A3592CAF34DC0033B8BE /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78A3582CAF34DC0033B8BE /* ProductDetailViewController.swift */; };
 		CD78A35B2CAF3CE50033B8BE /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78A35A2CAF3CE50033B8BE /* ProductCell.swift */; };
 		CD78A35D2CB0086D0033B8BE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78A35C2CB0086D0033B8BE /* MainTabBarController.swift */; };
+		CD78A35F2CB013700033B8BE /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78A35E2CB013700033B8BE /* SignInViewController.swift */; };
+		CD78A3612CB017230033B8BE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78A3602CB017230033B8BE /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		CD78A3582CAF34DC0033B8BE /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		CD78A35A2CAF3CE50033B8BE /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		CD78A35C2CB0086D0033B8BE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		CD78A35E2CB013700033B8BE /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		CD78A3602CB017230033B8BE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +77,13 @@
 				CD78A34E2CAF06DB0033B8BE /* Product.swift */,
 				CD78A3502CAF07050033B8BE /* ApiService.swift */,
 				CD78A3542CAF07E00033B8BE /* ProductListViewController.swift */,
+				CD78A35E2CB013700033B8BE /* SignInViewController.swift */,
 				CD78A35A2CAF3CE50033B8BE /* ProductCell.swift */,
 				CD78A3562CAF082E0033B8BE /* ProductCoordinator.swift */,
 				CD78A3582CAF34DC0033B8BE /* ProductDetailViewController.swift */,
 				CD78A3522CAF07B80033B8BE /* ProductResponse.swift */,
 				CD78A35C2CB0086D0033B8BE /* MainTabBarController.swift */,
+				CD78A3602CB017230033B8BE /* UIColor+Extension.swift */,
 			);
 			path = ProductApp;
 			sourceTree = "<group>";
@@ -151,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD78A35F2CB013700033B8BE /* SignInViewController.swift in Sources */,
 				CD78A3572CAF082E0033B8BE /* ProductCoordinator.swift in Sources */,
 				CD78A3532CAF07B80033B8BE /* ProductResponse.swift in Sources */,
+				CD78A3612CB017230033B8BE /* UIColor+Extension.swift in Sources */,
 				CD78A35D2CB0086D0033B8BE /* MainTabBarController.swift in Sources */,
 				CD78A3552CAF07E00033B8BE /* ProductListViewController.swift in Sources */,
 				CD78A3512CAF07050033B8BE /* ApiService.swift in Sources */,

@@ -55,9 +55,12 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     // UITableViewDelegate
-    func tableView(_ tableview: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let product = products[indexPath.row]
+        print("hello \(product.title)")
         coordinator?.showProductDetail(for: product)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
     }
 }
 

@@ -18,5 +18,6 @@ class ProductCoordinator {
         let productDetailVC = ProductDetailViewController()
         productDetailVC.product = product
         navigationController.pushViewController(productDetailVC, animated: true)
+        
     }
 }
