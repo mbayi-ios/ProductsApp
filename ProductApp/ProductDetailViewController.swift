@@ -5,6 +5,16 @@ import UIKit
 class ProductDetailViewController: UIViewController {
     var product: Product?
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     private let productImageView = UIImageView()
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
