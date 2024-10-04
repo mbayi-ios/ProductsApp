@@ -17,6 +17,7 @@
 		CD78A3572CAF082E0033B8BE /* ProductCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78A3562CAF082E0033B8BE /* ProductCoordinator.swift */; };
 		CD78A3592CAF34DC0033B8BE /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78A3582CAF34DC0033B8BE /* ProductDetailViewController.swift */; };
 		CD78A35B2CAF3CE50033B8BE /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78A35A2CAF3CE50033B8BE /* ProductCell.swift */; };
+		CD78A35D2CB0086D0033B8BE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD78A35C2CB0086D0033B8BE /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CD78A3562CAF082E0033B8BE /* ProductCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCoordinator.swift; sourceTree = "<group>"; };
 		CD78A3582CAF34DC0033B8BE /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		CD78A35A2CAF3CE50033B8BE /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		CD78A35C2CB0086D0033B8BE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				CD78A3562CAF082E0033B8BE /* ProductCoordinator.swift */,
 				CD78A3582CAF34DC0033B8BE /* ProductDetailViewController.swift */,
 				CD78A3522CAF07B80033B8BE /* ProductResponse.swift */,
+				CD78A35C2CB0086D0033B8BE /* MainTabBarController.swift */,
 			);
 			path = ProductApp;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				CD78A3572CAF082E0033B8BE /* ProductCoordinator.swift in Sources */,
 				CD78A3532CAF07B80033B8BE /* ProductResponse.swift in Sources */,
+				CD78A35D2CB0086D0033B8BE /* MainTabBarController.swift in Sources */,
 				CD78A3552CAF07E00033B8BE /* ProductListViewController.swift in Sources */,
 				CD78A3512CAF07050033B8BE /* ApiService.swift in Sources */,
 				CD78A34F2CAF06DB0033B8BE /* Product.swift in Sources */,
