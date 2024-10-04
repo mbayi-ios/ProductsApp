@@ -18,7 +18,6 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         
         title = "Products"
         view.backgroundColor = .white
-        
         setupTableView()
         fetchProducts()
     }
@@ -29,6 +28,8 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.delegate = self
         tableView.register(ProductCell.self, forCellReuseIdentifier: "ProductCell")
         view.addSubview(tableView)
+        
+        tableView.rowHeight = 80
     }
     
     private func fetchProducts() {

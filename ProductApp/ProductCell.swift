@@ -15,6 +15,7 @@ class ProductCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -22,6 +23,7 @@ class ProductCell: UITableViewCell {
     }
     
     private func setupView() {
+        
         productImageView.translatesAutoresizingMaskIntoConstraints = false
         productImageView.contentMode = .scaleAspectFill
         productImageView.clipsToBounds = true
@@ -35,8 +37,8 @@ class ProductCell: UITableViewCell {
         NSLayoutConstraint.activate([
             productImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             productImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            productImageView.widthAnchor.constraint(equalToConstant: 50),
-            productImageView.heightAnchor.constraint(equalToConstant: 50),
+            productImageView.widthAnchor.constraint(equalToConstant: 80),
+            productImageView.heightAnchor.constraint(equalToConstant: 80),
             
             titleLabel.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: 10),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
