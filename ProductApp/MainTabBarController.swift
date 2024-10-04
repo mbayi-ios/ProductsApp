@@ -13,12 +13,12 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setupTabBarAppearance() {
-        tabBar.barTintColor = UIColor(hex: "#00958F")
-        tabBar.backgroundColor = UIColor(hex: "#00958F")
-        tabBar.tintColor = .white
+        tabBar.barTintColor = .white
+        tabBar.backgroundColor = .white
+        tabBar.tintColor = UIColor(hex: "#00958F")
         tabBar.unselectedItemTintColor = UIColor.black
-       // tabBar.isTranslucent = false
         
+       // tabBar.isTranslucent = false
     }
     
     private func setupViewControllers() {
@@ -31,7 +31,6 @@ class MainTabBarController: UITabBarController {
         productListNavController.tabBarItem = UITabBarItem(title: "Products", image: UIImage(systemName: "list.bullet"), tag: 0)
         
         let signInVC = SignInViewController()
-        signInVC.title = "Sign In"
         let signInNavController = UINavigationController(rootViewController: signInVC)
         signInNavController.tabBarItem = UITabBarItem(title: "Sign In", image: UIImage(systemName: "person.circle"), tag: 1)
         
