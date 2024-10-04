@@ -10,9 +10,7 @@ import UIKit
 
 class ProductListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private let tableView = UITableView()
-    
     private var products: [Product] = []
-    
     var coordinator: ProductCoordinator?
     
     override func viewDidLoad() {
@@ -29,7 +27,7 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         tableView.frame = view.bounds
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ProductCell")
+        tableView.register(ProductCell.self, forCellReuseIdentifier: "ProductCell")
         view.addSubview(tableView)
     }
     
@@ -49,9 +47,9 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductCell
         let product = products[indexPath.row]
-        cell.textLabel?.text = product.title
+        cell.configure(with: product)
         return cell
     }
     
@@ -59,5 +57,20 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableview: UITableView, didSelectRowAt indexPath: IndexPath) {
         let product = products[indexPath.row]
         coordinator?.showProductDetail(for: product)
+    }
+}
+
+
+extension UIImageView {
+    func loadImage(from urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data, error == nil {
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: data)
+                }
+            }
+        }.resume()
     }
 }
